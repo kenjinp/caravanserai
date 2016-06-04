@@ -58,7 +58,7 @@
     "browserify-shim": "3.8.3",
     "grunt-bower-concat": "^1.0.0",
     "grunt-browserify": "^3.8.0",
-    "browserify-dustjs": "0.0.3",
+    "browserify-dustjs": "0.0.3"
   },
   "devDependencies": {
     "babel-preset-es2015": "6.5.0",
