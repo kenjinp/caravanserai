@@ -1,0 +1,11 @@
+<section class="content-header">
+    <h1>
+        Welcome to the Home Page
+    </h1>
+    <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-dashboard home"></i> Home</a></li>
+    </ol>
+</section>
+<section class="content">
+    <h1>Please be merry!</h1>
+</section>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://ogp.me/ns/fb#">
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>{+title}RR{/title}</title>
+
+	{+opengraph}
+      <meta property="og:type" content="website"/>
+      <meta property="og:title" content="llx"/>
+      <meta property="og:description" content="llx"/>
+	{/opengraph}
+
+    <!--<link rel="stylesheet" href="/css/themes.css">-->
+    <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootswatch/3.2.0/paper/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/app.css">
+    <link rel="stylesheet" href="/css/font-awesome/font-awesome.min.css">
+    <!--<link rel="icon" href="/images/favicon.ico" type="image/x-icon">-->
+
+</head>
+
+<body>
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-6 col-md-4 col-md-offset-4" style="margin-top: 50px;">
+            <div class="account-wall">
+                <!--<img class="profile-img" src="https://lh5.googleusercontent.com/-b0-k99FZlyE/AAAAAAAAAAI/AAAAAAAAAAA/eu7opA4byxI/photo.jpg?sz=120" alt="">-->
+                <!--<img class="profile-img" src="https://lh5.googleusercontent.com/-b0-k99FZlyE/AAAAAAAAAAI/AAAAAAAAAAA/eu7opA4byxI/photo.jpg?sz=120" alt="">-->
+                <div class="col-md-12 text-center"><a href="../" class="navbar-brand" style="float: none;"></a></div>
+                <div class="col-md-12" style="margin-bottom: 50px;"><h1 class="text-center login-title">CREATE YOUR
+                    ACCOUNT</h1></div>
+
+                <form id="loginForm" action="/api/v1/register" method="POST" role="form" class="form-signin">
+									{?messages}
+                      <ul>
+												{#messages}
+                            <li>{.}</li>
+												{/messages}
+
+                      </ul>
+									{/messages}
+                    <input type="text" class="form-control" placeholder="Email" id="email" name="email" required
+                           autofocus>
+                    <input type="password" class="form-control" placeholder="Password" id="password" name="password"
+                           required>
+                    <input style="margin-bottom: 50px;" type="password" class="form-control"
+                           placeholder="Confirm password" id="confirm-password" name="confirm-password" required>
+                    <button class="btn btn-lg btn-primary btn-block" type="submit">
+                        Register
+                    </button>
+                    <a href="#" class="pull-right need-help">Need help? </a><span class="clearfix"></span>
+                </form>
+            </div>
+            <a href="/login" class="text-center new-account">Sign in </a>
+        </div>
+    </div>
+</div>
+
+</body>

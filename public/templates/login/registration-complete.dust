@@ -1,0 +1,6 @@
+{>"layouts/master" /}
+
+{<body}
+    An email has been sent to your address.
+    <a href="/login">Go to login</a>
+{/body}

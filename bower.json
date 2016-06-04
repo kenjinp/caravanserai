@@ -1,0 +1,25 @@
+{
+  "name": "testacles",
+  "description": "Test suite",
+  "main": "index.js",
+  "author": "Kenneth Pirman, Rene Simon",
+  "moduleType": [
+    "node"
+  ],
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.6",
+    "admin-lte": "~2.3.3",
+    "fontawesome": "~4.6.1",
+    "underscore": "^1.8.3",
+    "backgrid": "^0.3.7"
+  }
+}

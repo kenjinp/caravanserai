@@ -1,0 +1,6 @@
+# Streaming API to front end
+# connect API to some market
+# database stuff
+# event model
+# event handler
+# strategies

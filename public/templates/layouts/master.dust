@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <title>{+title /}</title>
+
+    <link rel="stylesheet" href="/css/app.css">
+    <!-- bower components -->
+    <link rel="stylesheet" href="/_bower.css">
+    <script src="/_bower.js"></script>
+
+</head>
+
+	{+body /}
+
+
+</html>

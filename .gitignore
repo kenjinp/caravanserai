@@ -31,3 +31,15 @@ node_modules
 
 # Optional REPL history
 .node_repl_history
+
+# InteliJ
+.idea
+
+#Mac files
+.DS_Store
+
+#Build
+.build
+
+#bower components
+bower_components
