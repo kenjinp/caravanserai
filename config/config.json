@@ -1,75 +1,47 @@
 {
-	"express": {
+    "express": {
 		"view cache": false,
-		"view engine": "js",
-		"views": "path:./.build/templates"
+		"view engine": "dust",
+		"views": "path:./public/templates"
 	},
 	"view engines": {
-		"js": {
+		"dust": {
 			"module": "makara",
 			"renderer": {
-				"method": "js",
+				"method": "dust",
 				"arguments": [
 					{
-						"cache": true,
-						"helpers": "config:dust.helpers"
+						"cache": false,
+						"helpers": "config:dust.helpers",
+						"whitespace": true
 					}
 				]
 			}
 		}
 	},
-	"dust": {
-		"helpers": [
-			"dust-makara-helpers"
-		]
-	},
-	"i18n": {
-		"contentPath": "path:./locales",
-		"fallback": "en-US"
-	},
-	"specialization": {
-	},
 	"middleware": {
-		"makara": {
-			"priority": 100,
+		"devtools": {
 			"enabled": true,
+			"priority": 35,
 			"module": {
-				"name": "makara",
+				"name": "construx",
 				"arguments": [
+					"path:./public",
+					"path:./.build",
 					{
-						"i18n": "config:i18n",
-						"specialization": "config:specialization"
-					}
-				]
-			}
-		},
-		"static": {
-			"module": {
-				"arguments": [
-					"path:./.build"
-				]
-			}
-		},
-		"router": {
-			"module": {
-				"arguments": [
-					{
-						"directory": "path:./controllers"
-					}
-				]
-			}
-		},
-		"appsec": {
-			"enabled": true,
-			"priority": 110,
-			"module": {
-				"name": "lusca",
-				"arguments": [
-					{
-						"csrf": false,
-						"xframe": false,
-						"p3p": false,
-						"csp": false
+						"template": {
+							"module": "construx-dustjs",
+							"files": "/templates/**/*.js",
+							"base": "templates"
+						},
+						"css": {
+							"module": "construx-sass",
+							"files": "/css/**/*.css"
+						},
+						"copier": {
+							"module": "construx-copier",
+							"files": "**/*"
+						}
 					}
 				]
 			}
@@ -79,8 +51,10 @@
 		"level": 0
 	},
 	"mongo": {
-		"host": "localhost",
-		"port": 27017,
-		"db": "testacles"
+		"host": "ds023373.mlab.com",
+		"port": 23373,
+		"db": "heroku_fwnffvz7",
+        "username": "caravanserai",
+        "password": "fwnffvz7"
 	}
 }
