@@ -1,80 +1,81 @@
 {
-	"name": "caravanserai",
-	"version": "0.1.0",
-	"description": "Test suite",
-	"author": "Kenneth Pirman",
-	"main": "index.js",
-	"scripts": {
-		"postinstall": "./post_install.sh",
-		"start": "node index.js",
-		"test": "grunt test",
-		"build": "grunt build",
-		"all": "npm run build && npm run test"
-	},
-	"engines": {
-		"node": "4.4.3",
-		"npm": "3.8.8"
-	},
-	"dependencies": {
-		"basic-auth": "^1.0.4",
-		"browserify": "^13.0.1",
-		"browserify-dustjs": "^0.1.1",
-		"chalk": "^1.1.3",
-		"construx": "^1.0.0",
-		"construx-copier": "^1.0.0",
-		"construx-dustjs": "^1.1.0",
-		"construx-less": "^1.0.0",
-		"construx-sass": "^1.0.0",
-		"dust-makara-helpers": "^4.1.2",
-		"dustjs-linkedin": "*",
-		"engine-munger": "*",
-		"eslint": "^1.10.3",
-		"express": "^4.12.2",
-		"kraken-js": "^1.0.3",
-		"makara": "^2.0.3",
-		"moment-timezone": "^0.5.3",
-		"mongoose": "^4.4.14",
-		"passport": "^0.3.2",
-		"passport-local": "^1.0.0",
-		"request": "^2.72.0",
-		"underscore": "^1.8.3"
-	},
-	"devDependencies": {
-		"babel-preset-es2015": "6.5.0",
-		"babelify": "^7.2.0",
-		"browserify-shim": "3.8.3",
-		"grunt": "^0.4.5",
-		"grunt-bower-concat": "^1.0.0",
-		"grunt-browserify": "^3.8.0",
-		"browserify-dustjs": "0.0.3",
-		"grunt-cli": "^0.1.13",
-		"grunt-concurrent": "^2.3.0",
-		"grunt-config-dir": "^0.3.2",
-		"grunt-contrib-clean": "^0.6.0",
-		"grunt-contrib-jshint": "^1.0.0",
-		"grunt-contrib-less": "^1.3.0",
-		"grunt-contrib-watch": "^1.0.0",
-		"grunt-copy-browser-modules": "^5.0.1",
-		"grunt-copy-to": "0.0.10",
-		"grunt-dustjs": "^1.4.0",
-		"grunt-eslint": "^17.3.2",
-		"grunt-localizr": "^0.2.4",
-		"grunt-mocha-cli": "^1.14.0",
-		"grunt-nodemon": "^0.4.2",
-		"mocha": "^1.18.0",
-		"supertest": "^0.9.0"
-	},
-	"browserify": {
-		"transform": [
-			"browserify-dustjs"
-		]
-	},
-	"browserify-shim": {
-		"jquery": "$",
-		"bootstrap": {
-			"depends": [
-				"jquery"
-			]
-		}
-	}
+  "name": "caravanserai",
+  "version": "0.1.0",
+  "description": "Test suite",
+  "author": "Kenneth Pirman",
+  "main": "server.js",
+  "scripts": {
+    "postinstall": "bash ./post_install.sh",
+    "start": "node server.js",
+    "test": "grunt test",
+    "build": "grunt build",
+    "all": "npm run build && npm run test"
+  },
+  "engines": {
+    "node": "4.4.3",
+    "npm": "3.8.8"
+  },
+  "dependencies": {
+    "basic-auth": "^1.0.4",
+    "bower": "^1.7.9",
+    "browserify": "^13.0.1",
+    "browserify-dustjs": "^0.1.1",
+    "chalk": "^1.1.3",
+    "construx": "^1.0.0",
+    "construx-copier": "^1.0.0",
+    "construx-dustjs": "^1.1.0",
+    "construx-less": "^1.0.0",
+    "construx-sass": "^1.0.0",
+    "dust-makara-helpers": "^4.1.2",
+    "dustjs-linkedin": "*",
+    "engine-munger": "*",
+    "eslint": "^1.10.3",
+    "express": "^4.12.2",
+    "kraken-js": "^1.0.3",
+    "makara": "^2.0.3",
+    "moment-timezone": "^0.5.3",
+    "mongoose": "^4.4.14",
+    "passport": "^0.3.2",
+    "passport-local": "^1.0.0",
+    "request": "^2.72.0",
+    "underscore": "^1.8.3"
+  },
+  "devDependencies": {
+    "babel-preset-es2015": "6.5.0",
+    "babelify": "^7.2.0",
+    "browserify-shim": "3.8.3",
+    "grunt": "^0.4.5",
+    "grunt-bower-concat": "^1.0.0",
+    "grunt-browserify": "^3.8.0",
+    "browserify-dustjs": "0.0.3",
+    "grunt-cli": "^0.1.13",
+    "grunt-concurrent": "^2.3.0",
+    "grunt-config-dir": "^0.3.2",
+    "grunt-contrib-clean": "^0.6.0",
+    "grunt-contrib-jshint": "^1.0.0",
+    "grunt-contrib-less": "^1.3.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-copy-browser-modules": "^5.0.1",
+    "grunt-copy-to": "0.0.10",
+    "grunt-dustjs": "^1.4.0",
+    "grunt-eslint": "^17.3.2",
+    "grunt-localizr": "^0.2.4",
+    "grunt-mocha-cli": "^1.14.0",
+    "grunt-nodemon": "^0.4.2",
+    "mocha": "^1.18.0",
+    "supertest": "^0.9.0"
+  },
+  "browserify": {
+    "transform": [
+      "browserify-dustjs"
+    ]
+  },
+  "browserify-shim": {
+    "jquery": "$",
+    "bootstrap": {
+      "depends": [
+        "jquery"
+      ]
+    }
+  }
 }
