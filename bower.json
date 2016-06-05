@@ -20,6 +20,7 @@
     "admin-lte": "~2.3.3",
     "fontawesome": "~4.6.1",
     "underscore": "^1.8.3",
-    "backgrid": "^0.3.7"
+    "backgrid": "^0.3.7",
+    "backbone.marionette": "^2.4.7"
   }
 }
