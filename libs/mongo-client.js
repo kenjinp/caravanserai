@@ -26,6 +26,7 @@ var MongoClient = function () {
 
 					// connect
 					var mongoUrl = conf.mongoUrl || this.createMongoUrl(conf);
+                    log.info('connecting to Mongo at: ', mongoUrl);
 					mongoose.connect(mongoUrl);
 
 					var db = mongoose.connection;

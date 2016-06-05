@@ -2,10 +2,7 @@
 
 const
 	express = require('express'),
-	kraken = require('kraken-js'),
-	passport = require('passport'),
-	auth = require('./libs/authentication'),
-	User = require('./models/internal-user');
+	kraken = require('kraken-js');
 
 
 var options, app;
@@ -24,14 +21,9 @@ options = {
 
 app = module.exports = express();
 app.use(kraken(options));
-app.on('middleware:after:session', (eventArgs) => {
-	//Give passport a way to serialize and deserialize a user. In this case, by the user's id.
-	passport.use(auth.localStrategy());
-	passport.serializeUser(auth.serializeUser);
-	passport.deserializeUser(auth.deserializeUser);
-	app.use(passport.initialize());
-	app.use(passport.session());
-});
+// app.on('middleware:after:session', (eventArgs) => {
+// 	//Give passport a way to serialize and deserialize a user. In this case, by the user's id.
+// });
 app.on('start', function () {
 	console.log('Application ready to serve requests.');
 	console.log('Environment: %s', app.kraken.get('env:env'));

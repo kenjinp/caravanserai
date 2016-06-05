@@ -22,7 +22,8 @@ function start(config, callback) {
 	try {
 		log.info('Starting up ...');
 		logger.init(config.get('logger'));
-		mongoClient.init(config.get('mongo')).then(() => {
+		mongoClient.init(config.get('mongo'))
+		.then(() => {
 			cleanCallback();
 		}).catch(cleanCallback);
 	} catch (error) {

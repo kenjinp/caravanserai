@@ -53,6 +53,8 @@
 	"mongo": {
 		"host": "localhost",
 		"port": 27017,
-		"db": "testacles-dev"
+		"db": "caravanserai-dev",
+        "username": "",
+        "password": ""
 	}
 }

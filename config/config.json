@@ -20,6 +20,50 @@
 		}
 	},
 	"middleware": {
+        "makara": {
+			"priority": 100,
+			"enabled": true,
+			"module": {
+				"name": "makara",
+				"arguments": [
+					{
+						"i18n": "config:i18n",
+						"specialization": "config:specialization"
+					}
+				]
+			}
+		},
+		"static": {
+			"module": {
+				"arguments": [
+					"path:./.build"
+				]
+			}
+		},
+		"router": {
+			"module": {
+				"arguments": [
+					{
+						"directory": "path:./controllers"
+					}
+				]
+			}
+		},
+		"appsec": {
+			"enabled": true,
+			"priority": 110,
+			"module": {
+				"name": "lusca",
+				"arguments": [
+					{
+						"csrf": false,
+						"xframe": false,
+						"p3p": false,
+						"csp": false
+					}
+				]
+			}
+		},
 		"devtools": {
 			"enabled": true,
 			"priority": 35,

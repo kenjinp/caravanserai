@@ -2,7 +2,6 @@
 
 const IndexModel = require('../models/index');
 
-
 module.exports = (router) => {
 
 	var model = new IndexModel();
@@ -14,6 +13,5 @@ module.exports = (router) => {
         res.render('index', model);
     });
 
-	require('./login')(router);
 	router.use('/api', require('./api/index'));
 };
